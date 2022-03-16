@@ -8,7 +8,7 @@ typedef int element;
 typedef struct {
 	element data[MAX_QUEUE_SIZE];
 	int front, rear;
-	int num; // ÇöÀç µ¥ÀÌÅÍ ¼ö
+	int num; // íì— ë“¤ì–´ìˆëŠ” ìš”ì†Œì˜ ê°œìˆ˜
 } QueueType;
 
 QueueType q;
