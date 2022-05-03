@@ -39,7 +39,6 @@ int main() {
 	int N;
 	scanf("%d", &N);
 
-	//node nodes[26]; // 트리 노드 최대 개수는 26
 	node *nodes = (node*)malloc(sizeof(node) * N);
 	int num;        // 현재 입력받는 노드의 인덱스
 
