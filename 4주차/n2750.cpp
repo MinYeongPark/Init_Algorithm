@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
 using namespace std;
@@ -28,8 +28,6 @@ void merge(int arr[], int sorted[], int left, int mid, int right) {
 
 void merge_sort(int arr[], int sorted[], int left, int right) {
 	int mid;
-	if (left == right)
-		sorted[0] = arr[0];
 	if (left < right) {
 		mid = (left + right) / 2;
 		// 분할
@@ -48,6 +46,11 @@ int main() {
 	int* sorted = new int[N];
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &arr[i]);
+	}
+
+	if (N == 1) {
+		printf("%d", arr[0]);
+		return 0;
 	}
 	merge_sort(arr, sorted, 0, N - 1);
 
