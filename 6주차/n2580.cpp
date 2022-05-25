@@ -1,10 +1,10 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
 
 int sudoku[9][9];
 
-bool posibility(int row, int col, int value) {
+bool possibility(int row, int col, int value) {
 	// 같은 행에 있는 열 원소 중에 겹치는 수가 있는지
 	for (int i = 0; i < 9; i++) {
 		if (sudoku[row][i] == value)
@@ -53,7 +53,7 @@ void resolve(int row, int col) {
 	if (sudoku[row][col] == 0) {
 		for (int value = 1; value <= 9; value++) {
 			// value 값이 중복되지 않는지 검사
-			if (posibility(row, col, value)) {
+			if (possibility(row, col, value)) {
 				sudoku[row][col] = value;
 				resolve(row, col + 1); // 다음 칸 진행
 			}
